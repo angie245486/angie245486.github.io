@@ -1,0 +1,164 @@
+<!DOCTYPE html> <!-- Especifica que el documento es HTML5 -->
+<html lang="es"> <!-- Define el lenguaje del documento como español -->
+
+<head> <!-- Sección de encabezado del documento -->
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura la visualización para dispositivos móviles -->
+    <title>Artículos de Ayuda - Directorio de Especialistas</title> <!-- Título de la página que aparece en la pestaña del navegador -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Establece un icono para la página -->
+    
+    <style> 
+        /* Estilos base */
+        * {
+            margin: 0; /* Elimina el margen por defecto de todos los elementos */
+            padding: 0; /* Elimina el relleno por defecto de todos los elementos */
+            box-sizing: border-box; /* Aplica el modelo de caja con border-box a todos los elementos */
+        }
+
+        body {
+            font-family:cursive; /* Define la fuente como cursiva */
+            background: linear-gradient(to right, #6bf6e8, #327e69); /* Fondo con un gradiente de color */
+            color: #050404; /* Color del texto en el cuerpo */
+            line-height: 1.6; /* Establece la altura de línea para mejorar la legibilidad */
+        }
+
+        header {
+            display: flex; /* Utiliza un contenedor flexible para los elementos dentro del encabezado */
+            justify-content: space-between; /* Distribuye los elementos del encabezado con espacio entre ellos */
+            align-items: center; /* Alinea los elementos verticalmente en el centro */
+            background: rgba(0, 0, 0, 0.5); /* Establece un fondo semitransparente */
+            padding: 20px; /* Añade relleno dentro del encabezado */
+        }
+
+        header img {
+            max-height: 50px; /* Define la altura máxima de la imagen en el encabezado */
+        }
+
+        nav ul {
+            list-style: none; /* Elimina los puntos de la lista */
+            display: flex; /* Muestra los elementos de la lista en fila */
+        }
+
+        nav ul li {
+            margin-left: 20px; /* Añade espacio entre los elementos de la lista */
+        }
+
+        nav ul li a {
+            text-decoration: none; /* Elimina el subrayado de los enlaces */
+            color: rgb(219, 219, 219); /* Define el color de los enlaces como gris claro */
+            font-size: 18px; /* Establece el tamaño de la fuente para los enlaces */
+            transition: color 0.3s ease; /* Establece una transición para el color del enlace */
+        }
+
+        nav ul li a:hover {
+            color: #21e62b; /* Cambia el color de los enlaces al pasar el ratón por encima */
+        }
+
+        .articles-section {
+            padding: 40px; /* Añade relleno alrededor de la sección de artículos */
+            background: linear-gradient(to right, #6bf6e8, #327e69); /* Fondo con un gradiente de color */
+            text-align: center; /* Centra el texto dentro de la sección */
+        }
+
+        .articles-grid {
+            display: grid; /* Utiliza un diseño de cuadrícula */
+            grid-template-columns: repeat(3, 1fr); /* Define 3 columnas de igual tamaño en la cuadrícula */
+            gap: 20px; /* Añade un espacio de 20px entre los elementos de la cuadrícula */
+            margin-top: 20px; /* Añade un margen superior a la cuadrícula */
+        }
+
+        .article {
+            background: #299f91; /* Establece un color de fondo verde para cada artículo */
+            padding: 20px; /* Añade relleno dentro de cada artículo */
+            border-radius: 10px; /* Redondea las esquinas de cada artículo */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Añade sombra a cada artículo */
+        }
+
+        .article h2 {
+            margin-top: 10px; /* Añade un margen superior al título del artículo */
+            font-size: 1.5rem; /* Establece el tamaño de la fuente del título */
+            color: #030303; /* Define el color del texto del título */
+            font-style: oblique; /* Aplica un estilo oblicuo al título */
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Define la fuente para el título */
+        }
+
+        .article a {
+            display: inline-block; /* Muestra el enlace como un bloque en línea */
+            margin-top: 10px; /* Añade un margen superior al enlace */
+            color: #0c0e0c; /* Define el color del enlace */
+            text-decoration: none; /* Elimina el subrayado del enlace */
+            font-weight: bold; /* Hace el texto del enlace en negrita */
+        }
+
+        .article a:hover {
+            text-decoration: underline; /* Subraya el enlace al pasar el ratón por encima */
+        }
+
+        /* Estilos responsivos */
+        @media (max-width: 1024px) {
+            .articles-grid {
+                grid-template-columns: repeat(2, 1fr); /* Reduce las columnas a 2 en pantallas más pequeñas */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .articles-grid {
+                grid-template-columns: 1fr; /* Reduce las columnas a 1 en pantallas aún más pequeñas */
+            }
+        }
+    </style>
+</head>
+
+<body> <!-- Comienza el cuerpo del documento -->
+    <header class="header-content"> <!-- Contenedor del encabezado -->
+        <img src="img/logo.jpg" alt="Logo Directorio de Especialistas" height="50px" class="logo"> <!-- Imagen del logo -->
+        <nav> <!-- Menú de navegación -->
+            <ul> <!-- Lista de enlaces de navegación -->
+                <li><a href="index.html#inicio">Inicio</a></li> <!-- Enlace a la sección de inicio -->
+                <li><a href="index.html#servicios">Servicios</a></li> <!-- Enlace a la sección de servicios -->
+                <li><a href="index.html#contacto">Contacto</a></li> <!-- Enlace a la sección de contacto -->
+                <li><a href="#articulos">Artículos de Ayuda</a></li> <!-- Enlace a la sección de artículos de ayuda -->
+            </ul>
+        </nav>
+    </header>
+
+    <section id="articulos" class="articles-section"> <!-- Sección de artículos -->
+        <h1>Artículos de Ayuda</h1> <!-- Título de la sección de artículos -->
+        <p>Explora nuestros recursos para mejorar tu bienestar emocional y mental.</p> <!-- Descripción introductoria de la sección -->
+
+        <div class="articles-grid"> <!-- Contenedor de la cuadrícula de artículos -->
+            <!-- Primer artículo -->
+            <article class="article">
+                <h2>Cómo Manejar la Ansiedad</h2>
+                <p>Aprende técnicas efectivas para controlar la ansiedad y mejorar tu bienestar emocional.</p>
+                <a href="https://www.psicologiaymente.com/clinica/como-manejar-ansiedad" target="_blank">Leer Más</a>
+            </article>
+            <!-- Segundo artículo -->
+            <article class="article">
+                <h2>La Importancia de la Autoestima</h2>
+                <p>Descubre cómo la autoestima influye en tu vida y cómo puedes fortalecerla.</p>
+                <a href="https://www.forosaludmental.com/" target="_blank">Foro de Ayuda</a>
+            </article>
+            <!-- Tercer artículo -->
+            <article class="article">
+                <h2>Recursos en Video</h2>
+                <p>Explora tutoriales en video sobre técnicas de relajación y meditación.</p>
+                <a href="https://www.youtube.com/results?search_query=relajación+mental" target="_blank">Ver Videos</a>
+            </article>
+            <!-- Cuarto artículo -->
+            <article class="article">
+                <h2>Blogs Especializados</h2>
+                <p>Consulta artículos escritos por expertos en psicología y bienestar.</p>
+                <a href="https://www.blogsaludmental.com/" target="_blank">Visitar Blog</a>
+            </article>
+            <!-- Quinto artículo -->
+            <article class="article">
+                <h2>Comunidades Online</h2>
+                <p>Únete a comunidades para compartir tus experiencias y recibir apoyo.</p>
+                <a href="https://www.reddit.com/r/SaúdeMental/" target="_blank">Reddit Salud Mental</a>
+            </article>
+        </div>
+    </section>
+
+</body>
+</html>

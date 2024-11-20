@@ -1,0 +1,122 @@
+<!DOCTYPE html> <!-- Define que el documento es HTML5 -->
+<html lang="es"> <!-- Especifica el idioma del contenido como español -->
+<head>
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Asegura que el diseño sea responsivo en dispositivos móviles -->
+    <title>Directorio de Especialistas</title> <!-- Título de la página que aparece en la pestaña del navegador -->
+    <link rel="stylesheet" href="css/styles.css"> <!-- Vincula el archivo de estilo CSS para el diseño de la página -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Define el icono que aparece en la pestaña del navegador -->
+</head>
+<body> <!-- Comienza el contenido del cuerpo de la página -->
+    <header class="header-content"> <!-- Contenedor para el encabezado de la página -->
+        <img src="img/logo.jpg" alt="Logo Directorio de Especialistas" height="50px" class="logo"> <!-- Logo de la página con texto alternativo -->
+        <nav> <!-- Contenedor para la navegación -->
+            <ul> <!-- Lista de enlaces de navegación -->
+                <li><a href="#inicio">Inicio</a></li> <!-- Enlace a la sección "inicio" de la misma página -->
+                <li><a href="#servicios">Servicios</a></li> <!-- Enlace a la sección "servicios" de la misma página -->
+                <li><a href="contactos.html">Contacto</a></li> <!-- Enlace a la página "contactos.html" -->
+            </ul>
+        </nav> <!-- Fin de la navegación -->
+    </header> <!-- Fin del encabezado -->
+    
+    <section id="inicio" class="hero-section"> <!-- Sección destacada de inicio -->
+        <h1>Directorio de Especialistas</h1> <!-- Título principal -->
+        <p>Encuentra profesionales en salud mental que te pueden ayudar.</p> <!-- Descripción introductoria -->
+        <button class="btn-primary" id="learn-more">Aprender Más</button> <!-- Botón para aprender más sobre el sitio -->
+    </section> <!-- Fin de la sección de inicio -->
+
+    <section id="servicios" class="services-section"> <!-- Sección de servicios -->
+        <h2>Nuestros Servicios</h2> <!-- Título de la sección -->
+        <div class="services-grid"> <!-- Contenedor para la grilla de servicios -->
+            <!-- Servicios Existentes -->
+            <article class="service"> <!-- Artículo para un servicio -->
+                <img src="img/foto1.jpg" alt="Consulta Virtual"> <!-- Imagen del servicio -->
+                <h3>Consulta Virtual</h3> <!-- Título del servicio -->
+                <p>Accede a sesiones en línea con especialistas certificados.</p> <!-- Descripción del servicio -->
+                <a href="consultasvirtuales.html">Consulta Virtual</a> <!-- Enlace al servicio específico -->
+            </article>
+            <article class="service">
+                <img src="img/foto2.jpg" alt="Diagnósticos Profesionales">
+                <h3>Diagnósticos Profesionales</h3>
+                <p>Obtén evaluaciones precisas de la mano de expertos.</p>
+                <a href="diagnosticos.html">Diagnósticos Profesionales</a>
+            </article>
+            <article class="service">
+                <img src="img/foto3.png" alt="Herramientas de Apoyo">
+                <h3>Herramientas de Apoyo</h3>
+                <p>Descarga guías y recursos para tu bienestar mental.</p>
+                <a href="herramientas.html">Herramientas de Apoyo</a>
+            </article>
+            <article class="service">
+                <img src="img/especialistas.jpg" alt="Especialistas">
+                <h3>Especialistas</h3>
+                <p>Contactos de especialistas para tu bienestar.</p>
+                <a href="Especialistas.html">Especialistas</a>
+            </article>
+            <article class="service">
+                <img src="img/terapia.jpeg" alt="Terapia en Grupo">
+                <h3>Terapia en Grupo</h3>
+                <p>Participa en sesiones grupales para fortalecer tu bienestar emocional.</p>
+                <a href="terapia.html">Terapia en Grupo</a>
+            </article>
+            <article class="service">
+                <img src="img/articulo.jpeg" alt="Articulos de Apoyo">
+                <h3>Articulos De Ayuda</h3>
+                <p>Guias de apoyo que te serviran en  tu proceso</p>
+                <a href="aticulos.html">Articulos de Apoyo</a>
+            </article>
+            <article class="service">
+                <img src="img/comparte.jpeg" alt="Charlas Educativas">
+                <h3>Comparte tu Historia</h3>
+                <p>Has que personas y especialistas conozcan tu historia</p>
+                <a href="comparte.html">Comparte Tu Historia</a>
+            </article>
+            <article class="service">
+                <img src="img/historias.jpeg" alt="Programas para Empresas">
+                <h3>Historias de Otros Usuarios</h3>
+                <p>Conoce situaciones personales</p>
+                <a href="historias.html">Historas de usuarios</a>
+            </article>
+            <article class="service">
+                <img src="img/formulario.png" alt="Atención Emergente">
+                <h3>Opinion personal</h3>
+                <p>Danos a conocer tu opinion</p>
+                <a href="formulario.html">opinion</a>
+            </article>
+        </div> <!-- Fin de la grilla de servicios -->
+    </section> <!-- Fin de la sección de servicios -->
+    
+    <section id="contacto" class="contact-section"> <!-- Sección de contacto -->
+        <h2>Contactar a un Especialista</h2> <!-- Título de la sección -->
+        <form id="contact-form" action="/enviar" method="post"> <!-- Formulario de contacto -->
+            <label for="nombre">Nombre (opcional):</label> <!-- Etiqueta para el campo de nombre -->
+            <input type="text" id="nombre" name="nombre"> <!-- Campo de entrada para nombre -->
+    
+            <label for="correo">Correo Electrónico:</label> <!-- Etiqueta para el campo de correo -->
+            <input type="email" id="correo" name="correo" required> <!-- Campo de entrada para correo, obligatorio -->
+    
+            <label for="mensaje">Describe tu situación:</label> <!-- Etiqueta para el campo de mensaje -->
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea> <!-- Campo de texto para mensaje, obligatorio -->
+    
+            <input type="submit" value="Enviar"> <!-- Botón para enviar el formulario -->
+        </form>
+        <div id="form-message"></div> <!-- Contenedor para mostrar el mensaje de confirmación o error -->
+    </section> <!-- Fin de la sección de contacto -->
+
+    <section id="ayuda-inmediata"> <!-- Sección para ofrecer ayuda inmediata en caso de crisis -->
+        <h2>¿Necesitas Ayuda Inmediata?</h2> <!-- Título de la sección -->
+        <p>Si sientes que estás en una crisis o necesitas hablar con alguien ahora, aquí hay recursos disponibles:</p> <!-- Descripción de la sección -->
+        <ul> <!-- Lista de recursos de ayuda inmediata -->
+            <li><strong>Línea Nacional de Salud Mental:</strong> <a href="tel:+1234567890">123-456-7890</a></li> <!-- Enlace telefónico para llamar a la línea de ayuda -->
+            <li><strong>Chat de Emergencia:</strong> <a href="/chat-emergencia">Iniciar Chat</a></li> <!-- Enlace para acceder a un chat de emergencia -->
+            <li><strong>Correo de Apoyo:</strong> <a href="mailto:apoyo@saludmental.com">apoyo@saludmental.com</a></li> <!-- Enlace para enviar un correo de apoyo -->
+        </ul>
+    </section> <!-- Fin de la sección de ayuda inmediata -->
+
+    <footer> <!-- Pie de página -->
+        <p>&copy; 2024 Directorio de Especialistas. Todos los derechos reservados.</p> <!-- Copyright del sitio -->
+    </footer> <!-- Fin del pie de página -->
+
+    <script src="js/main.js"></script> <!-- Vincula el archivo de JavaScript para la funcionalidad de la página -->
+</body>
+</html>

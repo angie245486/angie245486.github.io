@@ -1,0 +1,132 @@
+<!DOCTYPE html> <!-- Define que el documento es de tipo HTML5 -->
+<html lang="es"> <!-- Define el idioma del documento como español -->
+
+<head> <!-- Sección de encabezado del documento -->
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8 para manejar caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Asegura que la página se ajuste bien en dispositivos móviles -->
+    <title>Comparte tu Historia - Salud Mental</title> <!-- Título que aparece en la pestaña del navegador -->
+    <link rel="stylesheet" href="index.html"> <!-- Enlace a una hoja de estilo (aunque aquí debería ser un archivo CSS, no HTML) -->
+    <a href="index.html"></a> <!-- Enlace vacío que no tiene efecto visible en la página -->
+</head>
+
+<style>
+    /* Estilos globales */
+    body {
+        font-family: Arial, sans-serif; /* Define la fuente del cuerpo de la página */
+        margin: 0; /* Elimina el margen por defecto */
+        padding: 0; /* Elimina el relleno por defecto */
+        background-color: #f5f5f5; /* Define un color de fondo claro */
+    }
+
+    header {
+        background: linear-gradient(to right, #6bf6e8, #327e69); /* Fondo degradado para el encabezado */
+        color: white; /* Color blanco para el texto del encabezado */
+        padding: 20px; /* Añade relleno dentro del encabezado */
+        text-align: center; /* Centra el texto en el encabezado */
+    }
+
+    nav a {
+        color: white; /* Establece el color del enlace en el menú de navegación como blanco */
+        text-decoration: none; /* Elimina el subrayado de los enlaces */
+        font-size: 16px; /* Establece el tamaño de la fuente de los enlaces */
+    }
+
+    section {
+        padding: 20px; /* Añade relleno dentro de la sección */
+        margin: 20px; /* Añade margen alrededor de la sección */
+        background-color: white; /* Define un fondo blanco para la sección */
+        border-radius: 10px; /* Redondea las esquinas de la sección */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Añade una sombra sutil a la sección */
+    }
+
+    textarea {
+        width: 100%; /* Establece que el campo de texto ocupe todo el ancho */
+        height: 150px; /* Define la altura del área de texto */
+        padding: 10px; /* Añade relleno dentro del área de texto */
+        border-radius: 5px; /* Redondea las esquinas del área de texto */
+        border: 1px solid #ddd; /* Define un borde gris claro alrededor del área de texto */
+    }
+
+    button {
+        background: linear-gradient(to right, #43c2b5, #327e69); /* Fondo degradado para los botones */
+        color: white; /* Establece el color del texto como blanco */
+        padding: 10px 20px; /* Define el relleno dentro de los botones */
+        border: none; /* Elimina el borde de los botones */
+        border-radius: 5px; /* Redondea las esquinas de los botones */
+        cursor: pointer; /* Cambia el cursor a una mano cuando pasa sobre el botón */
+        margin-top: 10px; /* Añade un margen superior a los botones */
+    }
+
+    button:hover {
+        background-color: #0056b3; /* Cambia el color de fondo cuando el ratón pasa por encima del botón */
+    }
+
+    .buttons {
+        margin-top: 10px; /* Añade un margen superior a la sección de botones */
+    }
+
+    #status {
+        margin-top: 20px; /* Añade un margen superior al mensaje de estado */
+        font-weight: bold; /* Establece el texto en negrita */
+        color: #007BFF; /* Establece el color del texto como azul */
+    }
+
+</style>
+
+<body> <!-- Cuerpo del documento -->
+    <header> <!-- Contenedor del encabezado -->
+        <h1>Comparte tu Historia</h1> <!-- Título de la página en el encabezado -->
+        <nav> <!-- Menú de navegación -->
+            <a href="index.html">Volver al Inicio</a> <!-- Enlace para volver a la página de inicio -->
+        </nav>
+    </header>
+
+    <section id="compartir"> <!-- Sección principal donde los usuarios pueden compartir sus historias -->
+        <h2>Comparte tu experiencia con la salud mental</h2> <!-- Subtítulo en la sección -->
+        <form id="shareStoryForm"> <!-- Formulario para compartir historias -->
+            <textarea placeholder="Escribe tu historia aquí..." required></textarea> <!-- Área de texto para ingresar la historia -->
+
+            <div class="buttons"> <!-- Contenedor para los botones de visibilidad -->
+                <button type="button" id="anonimo">Anónimo</button> <!-- Botón para compartir de forma anónima -->
+                <button type="button" id="publico">Público</button> <!-- Botón para compartir públicamente -->
+            </div>
+
+            <button type="submit">Enviar Historia</button> <!-- Botón para enviar el formulario -->
+        </form>
+
+        <p id="status"></p> <!-- Mensaje de estado que indica cómo se compartirá la historia -->
+    </section>
+
+</body>
+
+<script>
+    // Seleccionamos los botones y el campo de texto
+    const anonimoButton = document.getElementById('anonimo'); // Selecciona el botón "Anónimo"
+    const publicoButton = document.getElementById('publico'); // Selecciona el botón "Público"
+    const statusText = document.getElementById('status'); // Selecciona el elemento para mostrar el estado
+
+    // Agregamos eventos a los botones
+    anonimoButton.addEventListener('click', function() {
+        statusText.textContent = 'Tu historia será compartida de manera anónima.'; // Cambia el mensaje de estado cuando se selecciona "Anónimo"
+    });
+
+    publicoButton.addEventListener('click', function() {
+        statusText.textContent = 'Tu historia será compartida públicamente.'; // Cambia el mensaje de estado cuando se selecciona "Público"
+    });
+
+    // Evento para enviar la historia
+    document.getElementById('shareStoryForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Previene que el formulario se envíe de manera tradicional
+        const storyText = event.target.querySelector('textarea').value; // Obtiene el texto ingresado en el área de texto
+
+        if (storyText.trim()) { // Verifica que el texto no esté vacío
+            alert('Gracias por compartir tu historia. ' + statusText.textContent); // Muestra un mensaje de agradecimiento con el estado seleccionado
+            event.target.querySelector('textarea').value = '';  // Limpia el campo de texto
+            statusText.textContent = '';  // Limpia el mensaje de estado
+        } else {
+            alert('Por favor, escribe algo en tu historia antes de enviarla.'); // Muestra un mensaje si el campo de texto está vacío
+        }
+    });
+</script>
+
+</html>

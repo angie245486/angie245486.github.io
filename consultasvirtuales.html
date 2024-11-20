@@ -1,0 +1,212 @@
+<!DOCTYPE html> <!-- Declaración del tipo de documento HTML5 -->
+<html lang="en"> <!-- Inicio de la etiqueta HTML, especificando que el idioma es inglés -->
+<head>
+    <meta charset="UTF-8"> <!-- Establece la codificación de caracteres como UTF-8 para soportar caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que la página sea responsiva en dispositivos móviles -->
+    <title>Consulta Virtual</title> <!-- Título de la página que aparece en la pestaña del navegador -->
+    <link rel="stylesheet" href="index.html"> <!-- Enlace incorrecto para la hoja de estilo, debería ser un archivo CSS y no HTML -->
+    <a href="index.html">inicio</a> <!-- Enlace a la página de inicio -->
+</head>
+
+<style>
+    /* Estilos CSS para la sección de consulta virtual */
+    .consulta-virtual {
+        background-color: #f0f8ff; /* Color de fondo claro para la sección */
+        padding: 50px; /* Espaciado interno */
+        text-align: center; /* Centra el texto */
+    }
+
+    .consulta-virtual h2 {
+        font-size: 2.5em; /* Tamaño de fuente grande para el subtítulo */
+        margin-bottom: 20px; /* Espacio debajo del subtítulo */
+        color: #56ab2f; /* Color del texto verde */
+    }
+
+    .beneficios-consulta ul {
+        list-style-type: none; /* Elimina los puntos de la lista */
+        padding: 0; /* Elimina el relleno de la lista */
+    }
+
+    .beneficios-consulta li {
+        font-size: 1.2em; /* Tamaño de fuente para los ítems de la lista */
+        margin: 15px 0; /* Espacio entre los elementos de la lista */
+    }
+
+    .como-funciona ol {
+        padding-left: 20px; /* Alineación de la lista numerada */
+    }
+
+    .como-funciona li {
+        font-size: 1.2em; /* Tamaño de fuente para los ítems de la lista numerada */
+        margin: 10px 0; /* Espacio entre los elementos de la lista numerada */
+    }
+
+    .testimonios-consulta blockquote {
+        background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente para los testimonios */
+        border-left: 5px solid #56ab2f; /* Borde izquierdo verde */
+        padding: 20px; /* Espaciado interno */
+        margin: 20px auto; /* Margen alrededor */
+        width: 70%; /* Ancho del bloque */
+        font-style: italic; /* Cursiva para el texto */
+    }
+
+    .cta-consulta {
+        background-color: #56ab2f; /* Fondo verde para la sección de llamada a la acción */
+        color: white; /* Texto blanco */
+        padding: 50px; /* Espaciado interno */
+        text-align: center; /* Centra el texto */
+    }
+
+    .cta-btn {
+        background-color: #a8e063; /* Fondo verde claro para el botón */
+        color: white; /* Texto blanco en el botón */
+        padding: 15px 30px; /* Espaciado interno del botón */
+        font-size: 1.2em; /* Tamaño de fuente en el botón */
+        border-radius: 5px; /* Bordes redondeados en el botón */
+        text-decoration: none; /* Elimina el subrayado en el enlace */
+        transition: background-color 0.3s ease; /* Efecto suave en el cambio de color de fondo */
+    }
+
+    .cta-btn:hover {
+        background-color: #56ab2f; /* Cambia el color de fondo cuando el botón es hover */
+    }
+
+    /* Otra sección de consulta con fondo y espaciado */
+    .consulta-virtual {
+        background-color: #f0f8ff; /* Fondo claro */
+        padding: 50px; /* Espaciado interno */
+    }
+
+    .consulta-container {
+        display: flex; /* Usa flexbox para alinear los elementos */
+        justify-content: space-between; /* Espacio entre los elementos */
+        align-items: center; /* Alinea los elementos verticalmente */
+        gap: 30px; /* Espacio entre los elementos */
+    }
+
+    .consulta-texto {
+        flex: 1; /* Ocupa el 50% del ancho del contenedor */
+        text-align: left; /* Alinea el texto a la izquierda */
+    }
+
+    .consulta-texto h2 {
+        font-size: 2.5em; /* Tamaño grande para el subtítulo */
+        margin-bottom: 20px; /* Espacio debajo del subtítulo */
+        color: #56ab2f; /* Color verde del texto */
+    }
+
+    .consulta-imagen {
+        flex: 1; /* Ocupa el 50% del ancho del contenedor */
+        text-align: right; /* Alinea la imagen a la derecha */
+    }
+
+    .consulta-imagen img {
+        max-width: 100%; /* Asegura que la imagen no sobrepase el ancho del contenedor */
+        height: auto; /* Mantiene la proporción de la imagen */
+        border-radius: 10px; /* Bordes redondeados en la imagen */
+    }
+
+    /* Estilo del formulario */
+    form {
+        display: flex; /* Usar flexbox */
+        flex-direction: column; /* Los elementos del formulario estarán en columna */
+        align-items: center; /* Centra los elementos */
+        margin-top: 30px; /* Espacio arriba del formulario */
+    }
+
+    form input, form select {
+        width: 80%; /* El 80% del ancho para los campos del formulario */
+        padding: 12px; /* Espaciado interno */
+        margin: 10px 0; /* Margen entre los campos */
+        border: 1px solid #ccc; /* Borde gris claro */
+        border-radius: 5px; /* Bordes redondeados */
+    }
+
+    form button {
+        background-color: #56ab2f; /* Fondo verde del botón */
+        color: white; /* Texto blanco en el botón */
+        padding: 15px 30px; /* Espaciado interno */
+        font-size: 1.2em; /* Tamaño de fuente en el botón */
+        border: none; /* Elimina el borde del botón */
+        border-radius: 5px; /* Bordes redondeados */
+        cursor: pointer; /* Muestra el cursor como puntero */
+    }
+
+    form button:hover {
+        background-color: #4e9b2b; /* Cambia el color de fondo cuando el botón es hover */
+    }
+</style>
+
+<body>
+
+    <!-- Sección de consulta virtual con descripción -->
+    <section id="consulta-virtual" class="consulta-virtual">
+        <h2>Consulta Virtual con Profesionales</h2> <!-- Título de la sección -->
+        <p>Accede a consultas virtuales con especialistas en salud mental desde la comodidad de tu hogar. Nuestro servicio permite que te conectes con profesionales certificados a través de videollamadas seguras, garantizando privacidad y confidencialidad en todo momento.</p> <!-- Descripción de la consulta virtual -->
+    </section>
+    
+    <!-- Sección de llamada a la acción (CTA) para agendar consulta -->
+    <section id="cta-consulta" class="cta-consulta">
+        <h3>Da el Primer Paso Hacia tu Bienestar</h3> <!-- Subtítulo -->
+        <p>Agenda una consulta virtual con un especialista en salud mental y comienza tu camino hacia una mejor salud emocional.</p> <!-- Descripción -->
+        <button class="cta-btn" id="openForm">Agenda tu Consulta</button> <!-- Botón que abre el formulario -->
+    </section>
+
+    <!-- Formulario oculto para agendar una consulta -->
+    <section id="form-container" style="display: none;">
+        <h2>Agendar Consulta</h2> <!-- Título del formulario -->
+        <form id="agenda-form"> <!-- Formulario de agenda -->
+            <input type="text" id="nombre" name="nombre" placeholder="Tu Nombre" required> <!-- Campo de texto para nombre -->
+            <input type="email" id="correo" name="correo" placeholder="Correo Electrónico" required> <!-- Campo de texto para correo electrónico -->
+            <select id="especialista" name="especialista" required> <!-- Selector para elegir el especialista -->
+                <option value="">Selecciona un Especialista</option> <!-- Opción vacía para indicar que se debe elegir un especialista -->
+                <option value="especialista1">Especialista 1</option> <!-- Opción para Especialista 1 -->
+                <option value="especialista2">Especialista 2</option> <!-- Opción para Especialista 2 -->
+                <option value="especialista3">Especialista 3</option> <!-- Opción para Especialista 3 -->
+            </select>
+            <input type="date" id="fecha" name="fecha" required> <!-- Campo para seleccionar la fecha -->
+            <input type="time" id="hora" name="hora" required> <!-- Campo para seleccionar la hora -->
+            <button type="submit">Confirmar Agenda</button> <!-- Botón para confirmar la agenda -->
+        </form>
+        <button id="cancelForm">Cancelar</button> <!-- Botón para cancelar el formulario -->
+    </section>
+
+    <script>
+        // Funcionalidad para mostrar y ocultar el formulario de agendar consulta
+        const openFormButton = document.getElementById('openForm'); // Obtiene el botón para abrir el formulario
+        const formContainer = document.getElementById('form-container'); // Obtiene el contenedor del formulario
+        const cancelFormButton = document.getElementById('cancelForm'); // Obtiene el botón para cancelar el formulario
+
+        // Evento para mostrar el formulario al hacer clic en "Agenda tu Consulta"
+        openFormButton.addEventListener('click', () => {
+            formContainer.style.display = 'block'; // Muestra el formulario
+        });
+
+        // Evento para ocultar el formulario al hacer clic en "Cancelar"
+        cancelFormButton.addEventListener('click', () => {
+            formContainer.style.display = 'none'; // Oculta el formulario
+        });
+
+        // Manejo del envío del formulario
+        const agendaForm = document.getElementById('agenda-form'); // Obtiene el formulario de agenda
+        agendaForm.addEventListener('submit', function (event) {
+            event.preventDefault(); // Previene el envío del formulario para manejarlo con JavaScript
+
+            // Obtiene los valores de los campos del formulario
+            const nombre = document.getElementById('nombre').value;
+            const correo = document.getElementById('correo').value;
+            const especialista = document.getElementById('especialista').value;
+            const fecha = document.getElementById('fecha').value;
+            const hora = document.getElementById('hora').value;
+
+            // Si todos los campos están completos, muestra una alerta con los detalles
+            if (nombre && correo && especialista && fecha && hora) {
+                alert(`¡Consulta agendada con éxito!\n\nDetalles:\nNombre: ${nombre}\nCorreo: ${correo}\nEspecialista: ${especialista}\nFecha: ${fecha}\nHora: ${hora}`);
+                formContainer.style.display = 'none'; // Oculta el formulario después de enviar
+            } else {
+                alert("Por favor, completa todos los campos."); // Si falta algún campo, muestra un mensaje de error
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html> <!-- Declaración del tipo de documento, especificando que es un documento HTML5 -->
+<html lang="es"> <!-- El lenguaje principal del documento es español -->
+
+<head> <!-- Sección del encabezado del documento -->
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8, para soportar caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta el diseño para que sea responsivo en dispositivos móviles -->
+    <title>Terapia en Grupo </title> <!-- Título de la página, que aparece en la pestaña del navegador -->
+
+    <style>
+        body { 
+            font-weight: 100; /* Define el grosor de la fuente */
+            margin: 0; /* Elimina el margen predeterminado del navegador */
+            padding: 0; /* Elimina el relleno predeterminado del navegador */
+            background-color:rgb(246, 242, 242); /* Establece un color de fondo claro */
+        }
+
+        header { 
+            background: linear-gradient(to right, #4185cd, #50c3a3); /* Establece un gradiente de colores en el fondo */
+            color: rgb(15, 14, 14); /* Define el color del texto en el encabezado */
+            padding: 20px; /* Añade relleno alrededor del encabezado */
+            text-align: center; /* Centra el texto dentro del encabezado */
+        }
+
+        nav a { 
+            color: white; /* Define el color de los enlaces de navegación como blanco */
+            text-decoration: none; /* Elimina el subrayado de los enlaces */
+            font-size: 16px; /* Define el tamaño de la fuente de los enlaces */
+        }
+
+        section { 
+            padding: 20px; /* Añade relleno alrededor del contenido principal */
+            margin: 20px; /* Añade un margen alrededor de la sección */
+            background-color: white; /* Establece el color de fondo como blanco */
+            border-radius: 10px; /* Redondea las esquinas del contorno de la sección */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Añade una sombra suave a la sección */
+        }
+
+        button { 
+            background-color: #007BFF; /* Establece el color de fondo del botón */
+            color: white; /* Define el color del texto del botón como blanco */
+            padding: 10px 20px; /* Añade relleno dentro del botón */
+            border: none; /* Elimina el borde del botón */
+            border-radius: 5px; /* Redondea las esquinas del botón */
+            cursor: pointer; /* Cambia el cursor a un puntero cuando se pasa sobre el botón */
+        }
+
+        button:hover { 
+            background-color: #0056b3; /* Cambia el color de fondo del botón cuando el cursor pasa por encima */
+        }
+
+        #formContainer { 
+            display: none; /* Oculta el formulario inicialmente */
+            margin-top: 20px; /* Añade un margen superior para separar el formulario del contenido previo */
+        }
+
+        #formContainer form { 
+            display: flex; /* Utiliza un contenedor flexible para alinear los elementos del formulario */
+            flex-direction: column; /* Establece que los elementos del formulario se alineen en una columna */
+        }
+
+        #formContainer label { 
+            margin: 10px 0 5px; /* Define márgenes para los elementos de las etiquetas del formulario */
+        }
+
+        #formContainer input, #formContainer textarea { 
+            padding: 10px; /* Añade relleno dentro de los campos de entrada */
+            border: 1px solid #ccc; /* Establece un borde gris claro para los campos de entrada */
+            border-radius: 5px; /* Redondea las esquinas de los campos de entrada */
+        }
+
+        #formContainer button { 
+            margin-top: 15px; /* Añade margen superior para separar el botón del resto del formulario */
+        }
+    </style>
+</head>
+
+<body> <!-- Comienza el cuerpo del documento -->
+    <header> <!-- Sección de encabezado -->
+        <h1>Terapia en Grupo</h1> <!-- Título principal -->
+        <nav> <!-- Menú de navegación -->
+            <a href="index.html">Volver al Inicio</a> <!-- Enlace para volver a la página principal -->
+        </nav>
+    </header>
+
+    <section id="terapia"> <!-- Sección principal con id 'terapia' -->
+        <h2>Sesión de Terapia en Grupo</h2> <!-- Subtítulo de la sección -->
+        <p>La terapia en grupo es una forma eficaz de abordar los trastornos emocionales y mentales. Únete a nuestras sesiones dirigidas por profesionales de la salud mental para compartir y recibir apoyo emocional.</p> <!-- Descripción de la terapia en grupo -->
+        <button id="startSession">Iniciar Sesión de Terapia</button> <!-- Botón para iniciar la sesión -->
+
+        <div id="formContainer"> <!-- Contenedor del formulario, inicialmente oculto -->
+            <form id="therapyForm"> <!-- Formulario de contacto -->
+                <label for="name">Nombre:</label> <!-- Etiqueta para el campo de nombre -->
+                <input type="text" id="name" name="name" placeholder="Tu nombre" required> <!-- Campo de entrada para el nombre -->
+
+                <label for="email">Correo Electrónico:</label> <!-- Etiqueta para el campo de correo -->
+                <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required> <!-- Campo de entrada para el correo electrónico -->
+
+                <label for="message">Mensaje:</label> <!-- Etiqueta para el campo de mensaje -->
+                <textarea id="message" name="message" placeholder="Cuéntanos sobre tus expectativas o inquietudes" rows="4" required></textarea> <!-- Campo de texto para el mensaje -->
+
+                <button type="submit">Enviar</button> <!-- Botón de envío del formulario -->
+            </form>
+        </div>
+    </section>
+
+    <script> <!-- Comienza la sección de JavaScript -->
+        // Agregar evento al botón "Iniciar Sesión de Terapia"
+        document.getElementById('startSession').addEventListener('click', function() {
+            const formContainer = document.getElementById('formContainer'); // Obtener el contenedor del formulario
+            formContainer.style.display = 'block'; // Mostrar el formulario cuando se haga clic en el botón
+        });
+
+        // Agregar evento al envío del formulario
+        document.getElementById('therapyForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevenir el envío real del formulario
+            alert('¡Formulario enviado con éxito! Nos pondremos en contacto contigo pronto.'); // Mostrar mensaje de éxito
+        });
+    </script>
+</body>
+</html>

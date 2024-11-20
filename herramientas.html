@@ -1,0 +1,132 @@
+<!DOCTYPE html> <!-- Declaración del tipo de documento (HTML5) -->
+<html lang="en"> <!-- Inicio de la etiqueta HTML, especificando que el idioma es inglés -->
+<head>
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configuración para un diseño responsivo -->
+    <title>Herramientas de apoyo</title> <!-- Título de la página que aparece en la pestaña del navegador -->
+    
+    <a href="index.html">Inicio</a> <!-- Enlace que lleva a la página de inicio -->
+</head>
+    <style>
+        /* Estilos CSS para personalizar el diseño de la página */
+        body {
+            font-family: Arial, sans-serif; /* Fuente del texto en la página */
+            line-height: 1.6; /* Espaciado entre líneas de texto */
+            margin: 0; /* Elimina el margen predeterminado del navegador */
+            padding: 0; /* Elimina el relleno predeterminado */
+            background-color: #f4f8fb; /* Color de fondo del cuerpo */
+            color: #333; /* Color del texto */
+        }
+        header {
+            background: linear-gradient(to right, #6b85f6, #32ffc5); /* Gradiente de fondo en el encabezado */
+            color: white; /* Color de texto blanco */
+            padding: 1rem 0; /* Espaciado interno del encabezado */
+            text-align: center; /* Alineación del texto en el centro */
+        }
+        nav {
+            display: flex; /* Usar diseño flexible para los elementos dentro del nav */
+            justify-content: center; /* Centra los elementos en el nav */
+            gap: 15px; /* Espacio entre los enlaces del nav */
+            background-color: #2f6185; /* Fondo del nav */
+            padding: 0.5rem 0; /* Espaciado interno del nav */
+        }
+        nav a {
+            color: white; /* Color del texto de los enlaces */
+            text-decoration: none; /* Elimina el subrayado de los enlaces */
+            font-weight: bold; /* Hace que el texto sea en negrita */
+        }
+        nav a:hover {
+            text-decoration: underline; /* Subraya los enlaces cuando el cursor pasa sobre ellos */
+        }
+        .hero {
+            background-image: url('img/mental.webp'); /* Fondo de imagen para la sección hero */
+            background-size: cover; /* Hace que la imagen cubra toda el área */
+            background-position: center; /* Centra la imagen de fondo */
+            color: white; /* Color de texto blanco */
+            text-align: center; /* Alineación de texto en el centro */
+            padding: 4rem 1rem; /* Espaciado interno de la sección hero */
+        }
+        .hero h1 {
+            font-size: 2.5rem; /* Tamaño de fuente para el título */
+            margin-bottom: 0.5rem; /* Márgenes debajo del título */
+        }
+        section {
+            padding: 2rem; /* Espaciado interno de las secciones */
+            margin: 1rem auto; /* Margen alrededor de las secciones */
+            max-width: 800px; /* Ancho máximo de las secciones */
+            background: white; /* Fondo blanco para las secciones */
+            border-radius: 8px; /* Bordes redondeados en las secciones */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor de las secciones */
+        }
+        section h2 {
+            color: #4caf50; /* Color verde para los subtítulos */
+            margin-bottom: 1rem; /* Márgenes debajo del subtítulo */
+        }
+        footer {
+            text-align: center; /* Alineación del texto en el centro */
+            padding: 1rem; /* Espaciado interno del pie de página */
+            background-color: #4caf50; /* Fondo verde del pie de página */
+            color: white; /* Color del texto blanco */
+        }
+        img {
+            max-width: 100%; /* Hace que la imagen se ajuste al 100% de su contenedor */
+            border-radius: 8px; /* Bordes redondeados para las imágenes */
+        }
+        ul {
+            padding-left: 1.5rem; /* Espaciado a la izquierda de las listas */
+        }
+        button {
+            display: block; /* Hace que el botón sea un bloque */
+            margin: 1rem auto; /* Márgenes alrededor del botón */
+            padding: 0.8rem 1.5rem; /* Espaciado interno del botón */
+            background-color: #4caf50; /* Fondo verde del botón */
+            color: white; /* Color del texto del botón */
+            border: none; /* Elimina el borde del botón */
+            border-radius: 4px; /* Bordes redondeados del botón */
+            cursor: pointer; /* Cambia el cursor cuando se pasa por encima */
+            font-size: 1rem; /* Tamaño de la fuente en el botón */
+        }
+        button:hover {
+            background-color: #45a049; /* Cambia el fondo cuando el botón es presionado */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Salud Mental y Bienestar</h1> <!-- Título principal de la página -->
+    </header>
+    <nav>
+        <a href="#importancia">Importancia</a> <!-- Enlace a la sección de importancia -->
+        <a href="#herramientas">Herramientas</a> <!-- Enlace a la sección de herramientas -->
+        <a href="#contacto">Contacto</a> <!-- Enlace a la sección de contacto -->
+    </nav>
+    <div class="hero">
+        <h1>Cuidar de tu mente, cuidar de tu vida</h1> <!-- Título de la sección hero -->
+        <p>Recursos y herramientas para fortalecer tu bienestar emocional.</p> <!-- Descripción en la sección hero -->
+    </div>
+    <section id="importancia">
+        <h2>¿Por qué es importante la salud mental?</h2> <!-- Subtítulo en la sección de importancia -->
+        <p>La salud mental es esencial para vivir una vida plena y satisfactoria. Afecta cómo pensamos, sentimos y actuamos en nuestra vida diaria. Además, influye en nuestra capacidad para enfrentar el estrés, relacionarnos con los demás y tomar decisiones importantes.</p> <!-- Texto explicativo sobre la importancia de la salud mental -->
+        <img src="img//meditar.jpeg" alt="Persona meditando"  height="200px "> <!-- Imagen relacionada con la meditación -->
+    </section>
+    <section id="herramientas">
+        <h2>Herramientas útiles</h2> <!-- Subtítulo para la sección de herramientas -->
+        <ul>
+            <li><strong>Meditación guiada:</strong> Reduce el estrés y mejora la concentración.</li> <!-- Item de lista -->
+            <li><strong>Ejercicios de respiración:</strong> Técnicas para calmar la mente en momentos de ansiedad.</li> <!-- Item de lista -->
+            <li><strong>Escritura terapéutica:</strong> Expresa tus pensamientos y emociones en un diario personal.</li> <!-- Item de lista -->
+            <li><strong>Rutinas saludables:</strong> Establece hábitos de sueño y ejercicio para fortalecer tu bienestar.</li> <!-- Item de lista -->
+        </ul>
+        <button onclick="alert('Próximamente disponibles herramientas interactivas')">Explorar más</button> <!-- Botón que muestra un mensaje al hacer clic -->
+    </section>
+    <section id="contacto">
+        <h2>Contacto</h2> <!-- Subtítulo para la sección de contacto -->
+        <p>¿Necesitas ayuda? Contáctanos:</p> <!-- Texto introductorio de contacto -->
+        <p>Email: <a href="mailto:ayuda@saludmental.com">ayuda@saludmental.com</a></p> <!-- Enlace de correo electrónico -->
+        <p>Teléfono: +1 800 123 4567</p> <!-- Número de teléfono -->
+    </section>
+    <footer>
+        <p>© 2024 Salud Mental y Bienestar. Todos los derechos reservados.</p> <!-- Texto del pie de página -->
+    </footer>
+</body>
+</html>

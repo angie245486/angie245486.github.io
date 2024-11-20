@@ -1,0 +1,228 @@
+/* Resetea el margen, el relleno y establece el modelo de caja en todo el documento */
+* {
+    margin: 0; /* Elimina el margen de todos los elementos */
+    padding: 0; /* Elimina el relleno de todos los elementos */
+    box-sizing: border-box; /* Establece el modelo de caja a border-box para manejar el tamaño total de los elementos */
+}
+
+/* Estilo general del body */
+body {
+    font-family: Arial, sans-serif; /* Establece la fuente principal como Arial */
+    background: linear-gradient(to right, #82c4bd, #6decca); /* Crea un fondo de gradiente de izquierda a derecha */
+    color: #fff; /* Establece el color del texto a blanco */
+    line-height: 1.6; /* Establece el alto de línea para mejorar la legibilidad */
+}
+
+/* Estilo del encabezado */
+header {
+    display: flex; /* Utiliza Flexbox para distribuir los elementos dentro del encabezado */
+    justify-content: space-between; /* Distribuye el contenido con espacio entre los elementos */
+    align-items: center; /* Alinea los elementos en el centro verticalmente */
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente negro */
+    padding: 20px; /* Añade espacio interno alrededor del contenido */
+}
+
+/* Estilo de la imagen del logo */
+header img {
+    max-height: 50px; /* Limita la altura máxima de la imagen del logo */
+}
+
+/* Estilo del menú de navegación */
+nav ul {
+    list-style: none; /* Elimina los puntos de las listas */
+    display: flex; /* Muestra los elementos de la lista en fila */
+}
+
+/* Espaciado entre los elementos del menú */
+nav ul li {
+    margin-left: 20px; /* Añade un margen a la izquierda de cada ítem */
+}
+
+/* Estilo de los enlaces de navegación */
+nav ul li a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: white; /* Establece el color del texto de los enlaces a blanco */
+    font-size: 18px; /* Define el tamaño de la fuente de los enlaces */
+    transition: color 0.3s ease; /* Aplica una transición suave en el cambio de color */
+}
+
+/* Estilo cuando el usuario pasa el cursor sobre un enlace */
+nav ul li a:hover {
+    color: #81c784; /* Cambia el color de los enlaces al pasar el mouse */
+}
+
+/* Estilo de la sección hero */
+.hero-section {
+    text-align: center; /* Centra el texto dentro de la sección */
+    padding: 50px 20px; /* Añade relleno en la parte superior e inferior, y a los lados */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('img/hero-image.jpg') no-repeat center center; /* Fondo de gradiente con una imagen de fondo */
+    background-size: cover; /* Asegura que la imagen de fondo cubra toda la sección */
+}
+
+/* Estilo del título principal en la sección hero */
+.hero-section h1 {
+    font-size: 3rem; /* Establece un tamaño grande para el título */
+    margin-bottom: 10px; /* Añade un margen inferior para separar el título del texto */
+}
+
+/* Estilo del texto en la sección hero */
+.hero-section p {
+    font-size: 1.2rem; /* Establece el tamaño de la fuente del párrafo */
+    margin-bottom: 20px; /* Añade un margen inferior al párrafo */
+}
+
+/* Estilo del botón en la sección hero */
+.hero-section .btn-primary {
+    padding: 10px 20px; /* Añade relleno dentro del botón */
+    background: #1a1d19; /* Establece el fondo del botón a un color oscuro */
+    border: none; /* Elimina cualquier borde alrededor del botón */
+    color: white; /* Establece el color del texto a blanco */
+    font-size: 16px; /* Define el tamaño de la fuente */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Aplica una transición en el cambio de color de fondo */
+}
+
+/* Estilo cuando el usuario pasa el cursor sobre el botón */
+.hero-section .btn-primary:hover {
+    background: #4f80d4; /* Cambia el fondo del botón al pasar el cursor */
+}
+
+/* Estilos de la sección de servicios */
+.services-section {
+    padding: 40px; /* Añade espacio interno */
+    background-color: #4caf50; /* Establece un fondo de color verde */
+    text-align: center; /* Centra el texto */
+}
+
+/* Estilo de la cuadrícula de servicios */
+.services-grid {
+    display: flex; /* Utiliza Flexbox para distribuir los elementos */
+    justify-content: space-around; /* Distribuye los servicios de manera uniforme */
+    margin-top: 20px; /* Añade un margen superior para separar de los elementos previos */
+}
+
+/* Estilos adicionales para la sección de servicios */
+.services-section {
+    padding: 40px; /* Añade relleno en toda la sección */
+    background-color: #ffffff; /* Cambia el fondo a blanco */
+    text-align: center; /* Centra el texto */
+    color: black; /* Establece el color del texto a negro */
+}
+
+/* Estilo de la cuadrícula de servicios usando Grid */
+.services-grid {
+    display: grid; /* Utiliza Grid para distribuir los elementos */
+    grid-template-columns: repeat(3, 1fr); /* Define tres columnas para la cuadrícula */
+    gap: 20px; /* Añade espacio entre las tarjetas de servicio */
+    margin-top: 20px; /* Añade un margen superior */
+}
+
+/* Estilo de cada servicio individual */
+.service {
+    background: #208a7e; /* Establece un fondo de color verde azulado */
+    padding: 20px; /* Añade relleno dentro de cada tarjeta de servicio */
+    border-radius: 10px; /* Redondea las esquinas de las tarjetas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Añade sombra a las tarjetas */
+}
+
+/* Estilo de las imágenes dentro de las tarjetas de servicio */
+.service img {
+    width: 100%; /* Hace que la imagen ocupe todo el ancho de la tarjeta */
+    border-radius: 10px; /* Redondea las esquinas de las imágenes */
+}
+
+/* Estilo del título dentro de cada tarjeta de servicio */
+.service h3 {
+    margin-top: 10px; /* Añade un margen superior */
+    font-size: 1.5rem; /* Establece un tamaño grande para el título */
+    color: #fff; /* Establece el color del texto a blanco */
+}
+
+/* Estilo de los enlaces dentro de las tarjetas de servicio */
+.service a {
+    display: inline-block; /* Hace que los enlaces se comporten como bloques en línea */
+    margin-top: 10px; /* Añade un margen superior */
+    color: #0c0e0c; /* Establece el color del enlace */
+    text-decoration: none; /* Elimina el subrayado */
+    font-weight: bold; /* Establece el peso de la fuente como negrita */
+}
+
+/* Estilo cuando el usuario pasa el cursor sobre un enlace dentro de los servicios */
+.service a:hover {
+    text-decoration: underline; /* Añade un subrayado al pasar el cursor */
+}
+
+/* Estilos responsivos */
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr); /* Cambia a dos columnas en pantallas medianas */
+    }
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr; /* Cambia a una columna en pantallas pequeñas */
+    }
+}
+
+/* Estilos de la sección de contacto */
+.contact-section {
+    background: linear-gradient(to right, #82c4bd, #6decca); /* Fondo de gradiente */
+    padding: 40px; /* Añade relleno */
+    text-align: center; /* Centra el texto */
+}
+
+/* Estilo del formulario de contacto */
+.contact-section form {
+    max-width: 600px; /* Establece el ancho máximo del formulario */
+    margin: 0 auto; /* Centra el formulario en la página */
+    background: #51957d; /* Establece el fondo del formulario */
+    padding: 20px; /* Añade relleno dentro del formulario */
+    border-radius: 10px; /* Redondea las esquinas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Añade sombra al formulario */
+}
+
+/* Estilo de las etiquetas del formulario */
+.contact-section label {
+    display: block; /* Hace que las etiquetas se comporten como bloques */
+    margin-bottom: 10px; /* Añade margen debajo de las etiquetas */
+    font-size: 1rem; /* Establece un tamaño de fuente para las etiquetas */
+}
+
+/* Estilo de los campos de entrada y área de texto */
+.contact-section input,
+.contact-section textarea {
+    width: 100%; /* Hace que los campos ocupen todo el ancho */
+    padding: 10px; /* Añade relleno dentro de los campos */
+    margin-bottom: 20px; /* Añade un margen inferior */
+    border: 1px solid #0e160f; /* Define un borde oscuro */
+    border-radius: 5px; /* Redondea las esquinas */
+    background: #ffffff; /* Establece un fondo blanco */
+    color: #000000; /* Establece el color del texto a negro */
+}
+
+/* Estilo del botón de envío */
+.contact-section input[type="submit"] {
+    background: #a9c2c8; /* Fondo gris para el botón */
+    border: none; /* Elimina el borde del botón */
+    color: rgb(21, 19, 19); /* Establece el color del texto */
+    cursor: pointer; /* Cambia el cursor a puntero */
+    transition: background-color 0.3s ease; /* Aplica una transición al color de fondo */
+}
+
+/* Estilo cuando el usuario pasa el cursor sobre el botón de envío */
+.contact-section input[type="submit"]:hover {
+    background: #5cd26a; /* Cambia el color de fondo al pasar el cursor */
+}
+
+/* Estilo del pie de página */
+footer {
+    text-align: center; /* Centra el texto del pie de página */
+    padding: 20px; /* Añade relleno */
+    background-color: #12335f; /* Establece el fondo del pie de página */
+}
+
+/* Estilos para ayuda inmediata */
+#ayuda-inmediata {
+    color: black; /* Establece el color del texto a negro */
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html> <!-- Declaración del tipo de documento HTML5 -->
+<html lang="es"> <!-- Inicio de la etiqueta HTML, especificando que el idioma es español -->
+<head>
+    <meta charset="UTF-8"> <!-- Establece la codificación de caracteres como UTF-8 para soportar caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que la página sea responsiva en dispositivos móviles -->
+    <title>Historias de Otros Usuarios </title> <!-- Título de la página que aparece en la pestaña del navegador -->
+    <link rel="stylesheet" href="index.html"> <!-- Enlace incorrecto para la hoja de estilo, debería ser un archivo CSS y no HTML -->
+    <a href="index.html"></a> <!-- Enlace vacío, no tiene contenido visible o propósito -->
+</head>
+
+<style>
+    /* Estilo global para el cuerpo de la página */
+    body {
+        font-family: Arial, sans-serif; /* Fuente tipográfica para todo el texto */
+        margin: 0; /* Elimina el margen por defecto del cuerpo */
+        padding: 0; /* Elimina el relleno por defecto del cuerpo */
+        background-color: #fcfcfc; /* Fondo blanco muy claro para toda la página */
+    }
+
+    /* Estilo para el encabezado */
+    header {
+        background: linear-gradient(to right, #a466eb, #56d2af); /* Degradado de color para el fondo del encabezado */
+        color: rgb(18, 17, 17); /* Color del texto en el encabezado */
+        padding: 20px; /* Espaciado interno en el encabezado */
+        text-align: center; /* Centra el texto en el encabezado */
+    }
+
+    /* Estilo para los enlaces dentro de la barra de navegación */
+    nav a {
+        color: rgb(17, 17, 17); /* Color de los enlaces */
+        text-decoration: none; /* Elimina el subrayado de los enlaces */
+        font-size: 16px; /* Tamaño de fuente de los enlaces */
+    }
+
+    /* Estilo para las secciones del contenido */
+    section {
+        padding: 20px; /* Espaciado interno dentro de las secciones */
+        margin: 20px; /* Margen entre las secciones */
+        background-color: white; /* Fondo blanco para las secciones */
+        border-radius: 10px; /* Bordes redondeados de las secciones */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil alrededor de las secciones */
+    }
+
+    /* Estilo para cada historia de usuario */
+    #userStories div {
+        background: linear-gradient(to right, #c6e3df, #6f827d); /* Degradado de color para cada bloque de historia */
+        padding: 10px; /* Espaciado interno dentro de cada historia */
+        margin: 10px 0; /* Margen superior e inferior entre las historias */
+        border-radius: 5px; /* Bordes redondeados para los bloques de historia */
+    }
+
+</style>
+
+<body>
+    <!-- Encabezado principal de la página -->
+    <header>
+        <h1>Historias de Otros Usuarios</h1> <!-- Título principal de la página -->
+        <nav>
+            <a href="index.html">Volver al Inicio</a> <!-- Enlace para regresar al inicio -->
+        </nav>
+    </header>
+
+    <!-- Sección principal de testimonios de usuarios -->
+    <section id="historias">
+        <h2>Testimonios y experiencias de usuarios</h2> <!-- Subtítulo de la sección de historias -->
+        <div id="userStories">
+            <!-- Las historias de usuarios se cargarán aquí -->
+        </div>
+    </section>
+
+</body>
+
+<script>
+    // Ejemplo de historias pre-cargadas (esto se podría cambiar para obtener historias desde un servidor o base de datos)
+    const userStories = [
+        'ANONIMO: Superé un episodio de depresión gracias a la terapia psiquiátrica.',  // Historia de un usuario anónimo
+        'Dayana martinez: La medicación y la terapia me ayudaron a gestionar mis ataques de pánico.',  // Historia de un usuario con nombre
+        'ANONIMO: Recuperé mi vida después de un diagnóstico de trastorno de ansiedad generalizada.'  // Otra historia anónima
+    ];
+
+    // Mostrar las historias en la página
+    const storiesContainer = document.getElementById('userStories'); // Obtiene el contenedor donde se mostrarán las historias
+    userStories.forEach(story => { // Itera sobre cada historia en el array de historias
+        const storyDiv = document.createElement('div'); // Crea un nuevo div para cada historia
+        storyDiv.textContent = story; // Asigna el contenido de texto a cada div (la historia)
+        storiesContainer.appendChild(storyDiv); // Añade el nuevo div con la historia al contenedor
+    });
+</script>
+</html>
